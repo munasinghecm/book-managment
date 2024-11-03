@@ -1,0 +1,32 @@
+<div class="container-fluid">
+    <div class="row header-row d-flex align-items-center">
+        <div class="col-md-6 text-center">
+                <h2 class="header-title m-0"> My Library </h2>
+        </div>
+        <div class="col-md-6 d-inline-block p-1 text-center">
+            @for (item of menuItemsList; track $index) {
+                <button mat-button class="me-1" (click)="onItemClick(item.route)"> {{item.name}} </button>
+            }
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="container-fluid">
+            <div class="row justify-content-center"> 
+                <!-- Main content area -->
+                <div class="col-md-8 pt-5">
+                    <!-- Welcome Tag -->
+                    <div class="row mb-4">
+                        <div class="col-md-6 text-start">
+                            <h1 class="m-0 mb-1 font-white"> Hello, Chandana </h1>
+                            <span class="font-white"> Welcome to Book Managment App </span>
+                        </div>
+                    </div>
+
+                    <ng-content></ng-content>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ 

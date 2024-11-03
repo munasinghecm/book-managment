@@ -1,0 +1,44 @@
+@import '../../../scss/variables.scss';
+
+.full-width-table {
+  width: 100%;
+}
+
+.mat-mdc-table {
+  background-color: transparent !important;
+}
+
+.mat-mdc-header-row {
+  color: $black-a10;
+}
+
+.mat-mdc-row {
+  background-color: transparent !important;
+  color: white;
+  .mat-mdc-cell {
+    background: transparent !important;
+  }
+}
+
+th {
+  border-color: $black-a10;
+}
+
+td {
+  border-color: $black-a20 ;
+}
+
+.mat-mdc-paginator{
+  background-color: transparent !important;
+  color: white;
+  border-top: 1px solid $black-a10;
+}
+
+:host ::ng-deep .mat-mdc-paginator-icon {
+  fill: white !important;
+}
+
+:host ::ng-deep .mat-mdc-icon-button[disabled] .mat-mdc-paginator-icon {
+  fill: $black-a50 !important;
+}
+

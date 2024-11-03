@@ -1,0 +1,14 @@
+@import '../../../scss/variables.scss';
+
+.header-row {
+    height: 56px;
+    background-color: $black-a30;
+}
+
+.header-title {
+    color: white;
+}
+
+:host ::ng-deep .mat-mdc-button {
+    color: white !important;
+}

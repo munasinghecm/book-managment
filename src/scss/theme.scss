@@ -1,0 +1,23 @@
+@use '@angular/material' as mat;
+@import './variables.scss';
+
+@include mat.core();
+
+$my-primary: mat.define-palette($app-primary-palette);
+$my-accent: mat.define-palette(mat.$pink-palette);
+
+$my-warn: mat.define-palette(mat.$red-palette);
+
+$my-theme: mat.define-light-theme((
+ color: (
+   primary: $my-primary,
+   accent: $my-accent,
+   warn: $my-warn,
+ ),
+ typography: mat.define-typography-config(),
+ density: -2,
+));
+
+
+@include mat.form-field-theme($my-theme);
+@include mat.form-field-density(-2);

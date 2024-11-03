@@ -1,0 +1,21 @@
+<app-header>
+    <!-- Stats -->
+    <div class="row mb-4">
+        @for (statValue of bookCollectionStats; track $index) {
+            <div class="col-md-3">
+                <app-stat-box [title]="statValue.title" [value]="statValue.value" [icon]="statValue.icon"></app-stat-box>
+            </div>
+        }
+    </div>
+
+    <!-- Book List Table -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="p-3 content-box">
+                <h4 class="mb-2 font-white"> Book List </h4>
+                <app-book-list-table></app-book-list-table>
+            </div>        
+        </div>
+    </div>
+</app-header>
+

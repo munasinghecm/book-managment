@@ -1,0 +1,66 @@
+<app-header>
+    <!-- Add Book Form -->
+    <div class="row">
+        <div class="col-md-12">
+            <form [formGroup]="addBookFormGroup" (ngSubmit)="onAddBook()" autocomplete="off">
+                <div class="p-3 content-box">
+                    <div class="row mb-4">
+                        <div class="col-md-6 text-start">
+                            <h4 class="mb-2 font-white"> Add List </h4>
+                        </div>
+                        <div class="col-md-6 text-end">
+                            <button class="me-2" mat-raised-button type="button"> Clear </button>
+                            <button class="" mat-raised-button color="primary" type="submit"> Add Book
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class="col-md-5">
+                            <mat-form-field class="fob" appearance="outline" color="primary">
+                                <mat-label> Book ISBN </mat-label>
+                                <input matInput type="text" formControlName="isbn" required="true">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-5">
+                            <mat-form-field class="fob" appearance="outline">
+                                <mat-label> Book Title </mat-label>
+                                <input matInput type="text" formControlName="title" required="true">
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class="col-md-5">
+                            <mat-form-field class="fob" appearance="outline">
+                                <mat-label> Book Author </mat-label>
+                                <input matInput type="text" formControlName="author" required="true">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-5">
+                            <mat-form-field class="fob" appearance="outline">
+                                <mat-label> Book Location </mat-label>
+                                <input matInput type="text" formControlName="location" required="true">
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class="col-md-5">
+                            <mat-form-field class="fob" appearance="outline">
+                                <mat-label> Book Category </mat-label>
+                                <input matInput type="text" formControlName="category" required="true">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-5">
+                            <mat-form-field class="fob" appearance="outline">
+                                <mat-label> Price </mat-label>
+                                <input matInput type="text" formControlName="price">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</app-header>
